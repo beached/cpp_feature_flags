@@ -1032,7 +1032,7 @@ int main( ) {
 #else
 	report( 2011, "__cpp_initializer_lists", false );
 #endif
-#if defined( __cpp_explicit_conversion ) 
+#if defined( __cpp_explicit_conversion )
 	report( 2011, "__cpp_explicit_conversion", true );
 #else
 	report( 2011, "__cpp_explicit_conversion", false );

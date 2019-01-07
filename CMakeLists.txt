@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.1)
 project(cpp_feature_tester)
 
 add_executable(cpp_feature_tester cpp_feature_tester.cpp)

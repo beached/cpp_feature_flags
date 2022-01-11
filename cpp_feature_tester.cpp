@@ -179,6 +179,9 @@ void report( int cpp_ver, CharT const ( &macro_name )[N], bool is_supported ) {
 	          << ( is_supported ? "yes\n" : "no\n" );
 }
 
+#define report_local( cpp_ver, name, is_supported ) \
+bool const support#name#cpp_ver = is_supported
+
 int main( ) {
 // Language
 #if __cpp_constexpr >= 202110L

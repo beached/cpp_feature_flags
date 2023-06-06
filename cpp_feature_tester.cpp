@@ -184,8 +184,12 @@ bool const support#name#cpp_ver = is_supported
 
 int main( ) {
 // Language
-#if __cpp_constexpr >= 202110L
+#if __cpp_constexpr >= 202211L
 	report( 2023, "__cpp_constexpr", true );
+#elif __cpp_constexpr >= 202207L
+	report( 2023, "__cpp_constexpr (202207)", true );
+#elif __cpp_constexpr >= 202110L
+	report( 2023, "__cpp_constexpr (202110)", true );
 #else
 	report( 2023, "__cpp_constexpr", false );
 #endif
@@ -199,15 +203,37 @@ int main( ) {
 #else
 	report( 2023, "__cpp_if_consteval", false );
 #endif
-#if __cpp_multidimensional_subscript >= 202110L
+#if __cpp_implicit_move >= 202207L
+	report( 2023, "__cpp_implicit_move", true );
+#else
+	report( 2023, "__cpp_implicit_move", false );
+#endif
+#if __cpp_multidimensional_subscript >= 202211L
 	report( 2023, "__cpp_multidimensional_subscript", true );
+#elif __cpp_multidimensional_subscript >= 202110L
+	report( 2023, "__cpp_multidimensional_subscript (202110)", true );
 #else
 	report( 2023, "__cpp_multidimensional_subscript", false );
+#endif
+#if __cpp_named_character_escapes >= 202207L
+	report( 2023, "__cpp_named_character_escapes", true );
+#else
+	report( 2023, "__cpp_named_character_escapes", false );
 #endif
 #if __cpp_size_t_suffix >= 202011L
 	report( 2023, "__cpp_size_t_suffix", true );
 #else
 	report( 2023, "__cpp_size_t_suffix", false );
+#endif
+#if __cpp_range_based_for >= 202211L
+	report( 2023, "__cpp_range_based_for", true );
+#else
+	report( 2023, "__cpp_range_based_for", false );
+#endif
+#if __cpp_static_call_operator >= 202207L
+	report( 2023, "__cpp_static_call_operator", true );
+#else
+	report( 2023, "__cpp_static_call_operator", false );
 #endif
 #if __cpp_aggregate_paren_init >= 201902L
 	report( 2020, "__cpp_aggregate_paren_init", true );
@@ -1280,4 +1306,16 @@ int main( ) {
 #else
 	report( 2017, "__cpp_lib_void_t", false );
 #endif
+#if __cpp_named_character_escape >= 202207L
+	report( 2023, "__cpp_named_character_escape", true );
+#else
+	report( 2023, "__cpp_named_character_escape", false );
+#endif
+#if __cpp_auto_cast >= 202110L
+	report( 2023, "__cpp_auto_cast", true );
+#else
+	report( 2023, "__cpp_auto_cast", false );
+#endif
+
+
 }

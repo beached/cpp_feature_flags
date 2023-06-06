@@ -27,34 +27,6 @@
 #if __has_include( <version> )
 #include <version>
 #endif
-
-#if __has_include( <bit> )
-#include <bit>
-#endif
-
-#if __has_include( <compare> )
-#include <compare>
-#endif
-
-#if __has_include( <concepts> )
-#include <concepts>
-#endif
-
-#if __has_include( <execution> )
-#include <execution>
-#endif
-
-#if __has_include( <filesystem> )
-#include <filesystem>
-#endif
-
-#if __has_include( <memory_resource> )
-#include <memory_resource>
-#endif
-
-#if __has_include( <ranges> )
-#include <ranges>
-#endif
 #if __has_include( <algorithm> )
 #include <algorithm>
 #endif
@@ -67,17 +39,38 @@
 #if __has_include( <atomic> )
 #include <atomic>
 #endif
+#if __has_include( <barrier> )
+#include <barrier>
+#endif
+#if __has_include( <bit> )
+#include <bit>
+#endif
+#if __has_include( <bitset> )
+#include <bitset>
+#endif
+#if __has_include( <charconv> )
+#include <charconv>
+#endif
 #if __has_include( <chrono> )
 #include <chrono>
 #endif
 #if __has_include( <cmath> )
 #include <cmath>
 #endif
+#if __has_include( <compare> )
+#include <compare>
+#endif
 #if __has_include( <complex> )
 #include <complex>
 #endif
+#if __has_include( <concepts> )
+#include <concepts>
+#endif
 #if __has_include( <cstddef> )
 #include <cstddef>
+#endif
+#if __has_include( <cstdlib> )
+#include <cstdlib>
 #endif
 #if __has_include( <deque> )
 #include <deque>
@@ -85,14 +78,38 @@
 #if __has_include( <exception> )
 #include <exception>
 #endif
+#if __has_include( <execution> )
+#include <execution>
+#endif
+#if __has_include( <expected> )
+#include <expected>
+#endif
+#if __has_include( <filesystem> )
+#include <filesystem>
+#endif
+#if __has_include( <flat_map> )
+#include <flat_map>
+#endif
+#if __has_include( <flat_set> )
+#include <flat_set>
+#endif
+#if __has_include( <format> )
+#include <format>
+#endif
 #if __has_include( <forward_list> )
 #include <forward_list>
 #endif
 #if __has_include( <functional> )
 #include <functional>
 #endif
+#if __has_include( <generator> )
+#include <generator>
+#endif
 #if __has_include( <iomanip> )
 #include <iomanip>
+#endif
+#if __has_include( <ios> )
+#include <ios>
 #endif
 #if __has_include( <iostream> )
 #include <iostream>
@@ -115,8 +132,14 @@
 #if __has_include( <map> )
 #include <map>
 #endif
+#if __has_include( <mdspan> )
+#include <mdspan>
+#endif
 #if __has_include( <memory> )
 #include <memory>
+#endif
+#if __has_include( <memory_resource> )
+#include <memory_resource>
 #endif
 #if __has_include( <mutex> )
 #include <mutex>
@@ -133,8 +156,14 @@
 #if __has_include( <ostream> )
 #include <ostream>
 #endif
+#if __has_include( <print> )
+#include <print>
+#endif
 #if __has_include( <queue> )
 #include <queue>
+#endif
+#if __has_include( <ranges> )
+#include <ranges>
 #endif
 #if __has_include( <regex> )
 #include <regex>
@@ -148,8 +177,17 @@
 #if __has_include( <shared_mutex> )
 #include <shared_mutex>
 #endif
+#if __has_include( <spanstream> )
+#include <spanstream>
+#endif
 #if __has_include( <stack> )
 #include <stack>
+#endif
+#if __has_include( <stacktrace> )
+#include <stacktrace>
+#endif
+#if __has_include( <stdatomic.h> )
+#include <stdatomic.h>
 #endif
 #if __has_include( <string> )
 #include <string>
@@ -157,11 +195,17 @@
 #if __has_include( <string_view> )
 #include <string_view>
 #endif
+#if __has_include( <thread> )
+#include <thread>
+#endif
 #if __has_include( <tuple> )
 #include <tuple>
 #endif
 #if __has_include( <type_traits> )
 #include <type_traits>
+#endif
+#if __has_include( <typeinfo> )
+#include <typeinfo>
 #endif
 #if __has_include( <unordered_map> )
 #include <unordered_map>

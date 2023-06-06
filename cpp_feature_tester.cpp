@@ -133,6 +133,9 @@
 #if __has_include( <ostream> )
 #include <ostream>
 #endif
+#if __has_include( <queue> )
+#include <queue>
+#endif
 #if __has_include( <regex> )
 #include <regex>
 #endif
@@ -144,6 +147,9 @@
 #endif
 #if __has_include( <shared_mutex> )
 #include <shared_mutex>
+#endif
+#if __has_include( <stack> )
+#include <stack>
 #endif
 #if __has_include( <string> )
 #include <string>
@@ -180,7 +186,7 @@ void report( int cpp_ver, CharT const ( &macro_name )[N], bool is_supported ) {
 }
 
 #define report_local( cpp_ver, name, is_supported ) \
-bool const support#name#cpp_ver = is_supported
+	bool const support #name #cpp_ver = is_supported
 
 int main( ) {
 // Language
@@ -616,11 +622,6 @@ int main( ) {
 #else
 	report( 2017, "__cpp_lib_as_const", false );
 #endif
-#if __cpp_lib_associative_heterogeneous_erasure >= 202110L
-	report( 2023, "__cpp_lib_associative_heterogeneous_erasure", true );
-#else
-	report( 2023, "__cpp_lib_associative_heterogeneous_erasure", false );
-#endif
 #if __cpp_lib_assume_aligned >= 201811L
 	report( 2020, "__cpp_lib_assume_aligned", true );
 #else
@@ -706,11 +707,6 @@ int main( ) {
 #else
 	report( 2017, "__cpp_lib_byte", false );
 #endif
-#if __cpp_lib_byteswap >= 202110L
-	report( 2023, "__cpp_lib_byteswap", true );
-#else
-	report( 2023, "__cpp_lib_byteswap", false );
-#endif
 #if __cpp_lib_char8_t >= 201907L
 	report( 2020, "__cpp_lib_char8_t", true );
 #else
@@ -790,11 +786,6 @@ int main( ) {
 	report( 2020, "__cpp_lib_constexpr_tuple", true );
 #else
 	report( 2020, "__cpp_lib_constexpr_tuple", false );
-#endif
-#if __cpp_lib_constexpr_typeinfo >= 202106L
-	report( 2023, "__cpp_lib_constexpr_typeinfo", true );
-#else
-	report( 2023, "__cpp_lib_constexpr_typeinfo", false );
 #endif
 #if __cpp_lib_constexpr_utility >= 201811L
 	report( 2020, "__cpp_lib_constexpr_utility", true );
@@ -1186,30 +1177,10 @@ int main( ) {
 #else
 	report( 2020, "__cpp_lib_ssize", false );
 #endif
-#if __cpp_lib_stacktrace >= 202011L
-	report( 2023, "__cpp_lib_stacktrace", true );
-#else
-	report( 2023, "__cpp_lib_stacktrace", false );
-#endif
 #if __cpp_lib_starts_ends_with >= 201711L
 	report( 2020, "__cpp_lib_starts_ends_with", true );
 #else
 	report( 2020, "__cpp_lib_starts_ends_with", false );
-#endif
-#if __cpp_lib_stdatomic_h >= 202011L
-	report( 2023, "__cpp_lib_stdatomic_h", true );
-#else
-	report( 2023, "__cpp_lib_stdatomic_h", false );
-#endif
-#if __cpp_lib_string_contains >= 202011L
-	report( 2023, "__cpp_lib_string_contains", true );
-#else
-	report( 2023, "__cpp_lib_string_contains", false );
-#endif
-#if __cpp_lib_string_resize_and_overwrite >= 202110L
-	report( 2023, "__cpp_lib_string_resize_and_overwrite", true );
-#else
-	report( 2023, "__cpp_lib_string_resize_and_overwrite", false );
 #endif
 #if __cpp_lib_string_udls >= 201304L
 	report( 2014, "__cpp_lib_string_udls", true );
@@ -1245,11 +1216,6 @@ int main( ) {
 	report( 2017, "__cpp_lib_to_chars", true );
 #else
 	report( 2017, "__cpp_lib_to_chars", false );
-#endif
-#if __cpp_lib_to_underlying >= 202102L
-	report( 2023, "__cpp_lib_to_underlying", true );
-#else
-	report( 2023, "__cpp_lib_to_underlying", false );
 #endif
 #if __cpp_lib_transformation_trait_aliases >= 201304L
 	report( 2014, "__cpp_lib_transformation_trait_aliases", true );
@@ -1316,6 +1282,310 @@ int main( ) {
 #else
 	report( 2023, "__cpp_auto_cast", false );
 #endif
+#if __cpp_lib_adaptor_iterator_pair_constructor >= 202106L
+	report( 2023, "__cpp_lib_adaptor_iterator_pair_constructor", true );
+#else
+	report( 2023, "__cpp_lib_adaptor_iterator_pair_constructor", false );
+#endif
 
-
+#if __cpp_lib_adaptor_iterator_pair_constructor >= 202106L
+	report( 2023, "__cpp_lib_adaptor_iterator_pair_constructor", true );
+#else
+	report( 2023, "__cpp_lib_adaptor_iterator_pair_constructor", false );
+#endif
+#if __cpp_lib_algorithm_iterator_requirements >= 202207L
+	report( 2023, "__cpp_lib_algorithm_iterator_requirements", true );
+#else
+	report( 2023, "__cpp_lib_algorithm_iterator_requirements", false );
+#endif
+#if __cpp_lib_allocate_at_least >= 202302L
+	report( 2023, "__cpp_lib_allocate_at_least", true );
+#else
+	report( 2023, "__cpp_lib_allocate_at_least", false );
+#endif
+#if __cpp_lib_associative_heterogeneous_erasure >= 202110L
+	report( 2023, "__cpp_lib_associative_heterogeneous_erasure", true );
+#else
+	report( 2023, "__cpp_lib_associative_heterogeneous_erasure", false );
+#endif
+#if __cpp_lib_barrier >= 202302L
+	report( 2023, "__cpp_lib_barrier", true );
+#else
+	report( 2023, "__cpp_lib_barrier", false );
+#endif
+#if __cpp_lib_bind_back >= 202202L
+	report( 2023, "__cpp_lib_bind_back", true );
+#else
+	report( 2023, "__cpp_lib_bind_back", false );
+#endif
+#if __cpp_lib_byteswap >= 202110L
+	report( 2023, "__cpp_lib_byteswap", true );
+#else
+	report( 2023, "__cpp_lib_byteswap", false );
+#endif
+#if __cpp_lib_common_reference >= 202302L
+	report( 2023, "__cpp_lib_common_reference", true );
+#else
+	report( 2023, "__cpp_lib_common_reference", false );
+#endif
+#if __cpp_lib_common_reference_wrapper >= 202302L
+	report( 2023, "__cpp_lib_common_reference_wrapper", true );
+#else
+	report( 2023, "__cpp_lib_common_reference_wrapper", false );
+#endif
+#if __cpp_lib_concepts >= 202207L
+	report( 2023, "__cpp_lib_concepts", true );
+#else
+	report( 2023, "__cpp_lib_concepts", false );
+#endif
+#if __cpp_lib_constexpr_bitset >= 202207L
+	report( 2023, "__cpp_lib_constexpr_bitset", true );
+#else
+	report( 2023, "__cpp_lib_constexpr_bitset", false );
+#endif
+#if __cpp_lib_constexpr_charconv >= 202207L
+	report( 2023, "__cpp_lib_constexpr_charconv", true );
+#else
+	report( 2023, "__cpp_lib_constexpr_charconv", false );
+#endif
+#if __cpp_lib_constexpr_cmath >= 202202L
+	report( 2023, "__cpp_lib_constexpr_cmath", true );
+#else
+	report( 2023, "__cpp_lib_constexpr_cmath", false );
+#endif
+#if __cpp_lib_constexpr_memory >= 202202L
+	report( 2023, "__cpp_lib_constexpr_memory", true );
+#else
+	report( 2023, "__cpp_lib_constexpr_memory", false );
+#endif
+#if __cpp_lib_constexpr_typeinfo >= 202106L
+	report( 2023, "__cpp_lib_constexpr_typeinfo", true );
+#else
+	report( 2023, "__cpp_lib_constexpr_typeinfo", false );
+#endif
+#if __cpp_lib_containers_ranges >= 202202L
+	report( 2023, "__cpp_lib_containers_ranges", true );
+#else
+	report( 2023, "__cpp_lib_containers_ranges", false );
+#endif
+#if __cpp_lib_expected >= 202211L
+	report( 2023, "__cpp_lib_expected", true );
+#else
+	report( 2023, "__cpp_lib_expected", false );
+#endif
+#if __cpp_lib_flat_map >= 202207L
+	report( 2023, "__cpp_lib_flat_map", true );
+#else
+	report( 2023, "__cpp_lib_flat_map", false );
+#endif
+#if __cpp_lib_flat_set >= 202207L
+	report( 2023, "__cpp_lib_flat_set", true );
+#else
+	report( 2023, "__cpp_lib_flat_set", false );
+#endif
+#if __cpp_lib_format >= 202207L
+	report( 2023, "__cpp_lib_format", true );
+#else
+	report( 2023, "__cpp_lib_format", false );
+#endif
+#if __cpp_lib_format_ranges >= 202207L
+	report( 2023, "__cpp_lib_format_ranges", true );
+#else
+	report( 2023, "__cpp_lib_format_ranges", false );
+#endif
+#if __cpp_lib_formatters >= 202302L
+	report( 2023, "__cpp_lib_formatters", true );
+#else
+	report( 2023, "__cpp_lib_formatters", false );
+#endif
+#if __cpp_lib_forward_like >= 202207L
+	report( 2023, "__cpp_lib_forward_like", true );
+#else
+	report( 2023, "__cpp_lib_forward_like", false );
+#endif
+#if __cpp_lib_generator >= 202207L
+	report( 2023, "__cpp_lib_generator", true );
+#else
+	report( 2023, "__cpp_lib_generator", false );
+#endif
+#if __cpp_lib_ios_noreplace >= 202207L
+	report( 2023, "__cpp_lib_ios_noreplace", true );
+#else
+	report( 2023, "__cpp_lib_ios_noreplace", false );
+#endif
+#if __cpp_lib_is_implicit_lifetime >= 202302L
+	report( 2023, "__cpp_lib_is_implicit_lifetime", true );
+#else
+	report( 2023, "__cpp_lib_is_implicit_lifetime", false );
+#endif
+#if __cpp_lib_mdspan >= 202207L
+	report( 2023, "__cpp_lib_mdspan", true );
+#else
+	report( 2023, "__cpp_lib_mdspan", false );
+#endif
+#if __cpp_lib_modules >= 202207L
+	report( 2023, "__cpp_lib_modules", true );
+#else
+	report( 2023, "__cpp_lib_modules", false );
+#endif
+#if __cpp_lib_move_iterator_concept >= 202207L
+	report( 2023, "__cpp_lib_move_iterator_concept", true );
+#else
+	report( 2023, "__cpp_lib_move_iterator_concept", false );
+#endif
+#if __cpp_lib_optional >= 202110L
+	report( 2023, "__cpp_lib_optional", true );
+#else
+	report( 2023, "__cpp_lib_optional", false );
+#endif
+#if __cpp_lib_print >= 202207L
+	report( 2023, "__cpp_lib_print", true );
+#else
+	report( 2023, "__cpp_lib_print", false );
+#endif
+#if __cpp_lib_ranges >= 202202L
+	report( 2023, "__cpp_lib_ranges", true );
+#else
+	report( 2023, "__cpp_lib_ranges", false );
+#endif
+#if __cpp_lib_ranges >= 202207L
+	report( 2023, "__cpp_lib_ranges", true );
+#else
+	report( 2023, "__cpp_lib_ranges", false );
+#endif
+#if __cpp_lib_ranges >= 202211L
+	report( 2023, "__cpp_lib_ranges", true );
+#else
+	report( 2023, "__cpp_lib_ranges", false );
+#endif
+#if __cpp_lib_ranges >= 202302L
+	report( 2023, "__cpp_lib_ranges", true );
+#else
+	report( 2023, "__cpp_lib_ranges", false );
+#endif
+#if __cpp_lib_ranges_as_const >= 202207L
+	report( 2023, "__cpp_lib_ranges_as_const", true );
+#else
+	report( 2023, "__cpp_lib_ranges_as_const", false );
+#endif
+#if __cpp_lib_ranges_as_rvalue >= 202207L
+	report( 2023, "__cpp_lib_ranges_as_rvalue", true );
+#else
+	report( 2023, "__cpp_lib_ranges_as_rvalue", false );
+#endif
+#if __cpp_lib_ranges_cartesian_product >= 202207L
+	report( 2023, "__cpp_lib_ranges_cartesian_product", true );
+#else
+	report( 2023, "__cpp_lib_ranges_cartesian_product", false );
+#endif
+#if __cpp_lib_ranges_chunk >= 202202L
+	report( 2023, "__cpp_lib_ranges_chunk", true );
+#else
+	report( 2023, "__cpp_lib_ranges_chunk", false );
+#endif
+#if __cpp_lib_ranges_chunk_by >= 202202L
+	report( 2023, "__cpp_lib_ranges_chunk_by", true );
+#else
+	report( 2023, "__cpp_lib_ranges_chunk_by", false );
+#endif
+#if __cpp_lib_ranges_contains >= 202207L
+	report( 2023, "__cpp_lib_ranges_contains", true );
+#else
+	report( 2023, "__cpp_lib_ranges_contains", false );
+#endif
+#if __cpp_lib_ranges_enumerate >= 202302L
+	report( 2023, "__cpp_lib_ranges_enumerate", true );
+#else
+	report( 2023, "__cpp_lib_ranges_enumerate", false );
+#endif
+#if __cpp_lib_ranges_find_last >= 202207L
+	report( 2023, "__cpp_lib_ranges_find_last", true );
+#else
+	report( 2023, "__cpp_lib_ranges_find_last", false );
+#endif
+#if __cpp_lib_ranges_fold >= 202207L
+	report( 2023, "__cpp_lib_ranges_fold", true );
+#else
+	report( 2023, "__cpp_lib_ranges_fold", false );
+#endif
+#if __cpp_lib_ranges_iota >= 202202L
+	report( 2023, "__cpp_lib_ranges_iota", true );
+#else
+	report( 2023, "__cpp_lib_ranges_iota", false );
+#endif
+#if __cpp_lib_ranges_join_with >= 202202L
+	report( 2023, "__cpp_lib_ranges_join_with", true );
+#else
+	report( 2023, "__cpp_lib_ranges_join_with", false );
+#endif
+#if __cpp_lib_ranges_repeat >= 202207L
+	report( 2023, "__cpp_lib_ranges_repeat", true );
+#else
+	report( 2023, "__cpp_lib_ranges_repeat", false );
+#endif
+#if __cpp_lib_ranges_slide >= 202202L
+	report( 2023, "__cpp_lib_ranges_slide", true );
+#else
+	report( 2023, "__cpp_lib_ranges_slide", false );
+#endif
+#if __cpp_lib_ranges_stride >= 202207L
+	report( 2023, "__cpp_lib_ranges_stride", true );
+#else
+	report( 2023, "__cpp_lib_ranges_stride", false );
+#endif
+#if __cpp_lib_ranges_to_container >= 202202L
+	report( 2023, "__cpp_lib_ranges_to_container", true );
+#else
+	report( 2023, "__cpp_lib_ranges_to_container", false );
+#endif
+#if __cpp_lib_reference_from_temporary >= 202202L
+	report( 2023, "__cpp_lib_reference_from_temporary", true );
+#else
+	report( 2023, "__cpp_lib_reference_from_temporary", false );
+#endif
+#if __cpp_lib_shift >= 202202L
+	report( 2023, "__cpp_lib_shift", true );
+#else
+	report( 2023, "__cpp_lib_shift", false );
+#endif
+#if __cpp_lib_stacktrace >= 202011L
+	report( 2023, "__cpp_lib_stacktrace", true );
+#else
+	report( 2023, "__cpp_lib_stacktrace", false );
+#endif
+#if __cpp_lib_start_lifetime_as >= 202207L
+	report( 2023, "__cpp_lib_start_lifetime_as", true );
+#else
+	report( 2023, "__cpp_lib_start_lifetime_as", false );
+#endif
+#if __cpp_lib_stdatomic_h >= 202011L
+	report( 2023, "__cpp_lib_stdatomic_h", true );
+#else
+	report( 2023, "__cpp_lib_stdatomic_h", false );
+#endif
+#if __cpp_lib_string_contains >= 202011L
+	report( 2023, "__cpp_lib_string_contains", true );
+#else
+	report( 2023, "__cpp_lib_string_contains", false );
+#endif
+#if __cpp_lib_string_resize_and_overwrite >= 202110L
+	report( 2023, "__cpp_lib_string_resize_and_overwrite", true );
+#else
+	report( 2023, "__cpp_lib_string_resize_and_overwrite", false );
+#endif
+#if __cpp_lib_to_underlying >= 202102L
+	report( 2023, "__cpp_lib_to_underlying", true );
+#else
+	report( 2023, "__cpp_lib_to_underlying", false );
+#endif
+#if __cpp_lib_tuple_like >= 202207L
+	report( 2023, "__cpp_lib_tuple_like", true );
+#else
+	report( 2023, "__cpp_lib_tuple_like", false );
+#endif
+#if __cpp_lib_unreachable >= 202202L
+	report( 2023, "__cpp_lib_unreachable", true );
+#else
+	report( 2023, "__cpp_lib_unreachable", false );
+#endif
 }
